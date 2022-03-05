@@ -1,0 +1,5 @@
+//functions
+
+@function flexy-basis($item) {
+    @return calc($item * 8.333%); 
+}
