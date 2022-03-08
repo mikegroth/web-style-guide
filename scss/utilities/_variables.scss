@@ -15,10 +15,15 @@ $font-secondary: #fff;
 $color-primary: #58e1c1;
 $color-secondary: #51ddfc;
 
-$btn-success: #63cc82;
-$btn-error: #e4757a;
-$btn-warning: #fd7856;
-$btn-info: #927bc1;
+//button colors
+
+$button-colors: (
+'default': $color-secondary,
+'success': #63cc82,
+'error': #e4757a,
+'warning': #fd7856,
+'info': #927bc1, 
+);
 
 // Media Query breakpoint
 
@@ -42,9 +47,6 @@ $theme-colors: (
     'col-12': #80e8d1,
 );
 
-//flex basis percentage
-
-$flex-basis-std: 8.333%;
 
 
 

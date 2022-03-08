@@ -25,7 +25,39 @@
           background-color:map-get($map: $theme-colors, $key: col-#{$i});
       }
   }
-  
+
   .card {
     flex-basis: 100%;
   }
+
+@include mq($breakpoint) {
+  .container {
+    max-width: 1400px;
+    @include block-display;
+  }
+  
+  .centered {
+    @include block-display;
+  }
+  
+  .row {
+    flex-direction: row;
+  }
+  
+  [class^=col] {
+    display: flex;
+    justify-content: center;
+    margin-top: 0;
+    align-items: center;
+  }
+
+  [class^=col] + [class^=col] {
+    margin-left: 10px;
+  }
+  
+  @for $i from 1 through 12 {
+  .col-#{$i} {
+      flex-basis: flexy-basis(#{$i});
+    }
+  }
+}

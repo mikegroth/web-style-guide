@@ -7,9 +7,16 @@
     flex-basis: 100%;
     display: flex;
     flex-direction: column;
+    flex-basis: 100px;
+    @include mq($breakpoint) {
+      flex-direction: row;
+      justify-content: flex-end;
+      align-items: center;
+      flex-basis: 100%;
+    }
   }
-  
-  .nav-link {
+
+.nav-link {
     text-align: center;
     border-radius: 5px;
     padding: 10px 0;
@@ -18,7 +25,11 @@
     transition: 
       background-color .2s ease-in-out, 
       color .2s ease-in-out;
+
+    @include mq($breakpoint) {
+      flex-basis: 100px;
   }
+}
   
   .nav-link:hover {
     color: $font-secondary;

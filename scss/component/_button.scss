@@ -10,24 +10,23 @@
     padding: 10px 0;
     text-transform: uppercase;
     border-radius: 5px;
+    @include mq($breakpoint) {
+        padding: 10px 30px;
+      
+      +.btn {
+        margin-left: 10px;
+      }
+    }
   }
-  
-  .default {
-    background-color: #51ddfc;
+
+  @each $btn-type, $btn-color in $button-colors {
+    .#{$btn-type} {
+      background-color: $btn-color;
+      &:hover {
+        background-color: lighten($btn-color, 15%);
+        transition: background-color .5s ease-in;
+      }
+    }
   }
-  
-  .error {
-    background-color: #e4757a;
-  }
-  
-  .info {
-    background-color: #927bc1;
-  }
-  
-  .success {
-    background-color: #63cc82;
-  }
-  
-  .warning {
-    background-color: #fd7856;
-  }
+
+

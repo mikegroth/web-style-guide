@@ -21,3 +21,10 @@
         border: 1px solid #ccc;
     }
 }
+
+@include mq($breakpoint) {
+    .logo {
+        margin-left: initial;
+        margin-right: initial;
+      }
+}
